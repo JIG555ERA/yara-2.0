@@ -7,6 +7,16 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: "1mb" }));
 
+app.get("/", (_req, res) => {
+  res.status(200).json({
+    ok: true,
+    service: "books-ai-search",
+    message: "API is running. Use /api/health or /api/books/* endpoints.",
+    endpoints: ["/api/health", "/api/books/search?query=atomic%20habits"],
+    timestamp: new Date().toISOString(),
+  });
+});
+
 app.get("/api/health", (_req, res) => {
   res.status(200).json({
     ok: true,
