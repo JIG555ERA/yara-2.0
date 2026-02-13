@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books AI API</title>
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --card: #ffffff;
+        --text: #132033;
+        --muted: #4f647d;
+        --accent: #0d6efd;
+        --ok: #198754;
+        --border: #d8e1ee;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: radial-gradient(circle at 20% 20%, #e7f0ff 0%, var(--bg) 45%);
+        color: var(--text);
+      }
+      .wrap {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        width: min(760px, 100%);
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 28px;
+        box-shadow: 0 10px 30px rgba(19, 32, 51, 0.08);
+      }
+      h1 {
+        margin: 0 0 6px;
+        font-size: 28px;
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+      }
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #ebf8f0;
+        color: var(--ok);
+        border: 1px solid #cdebd9;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 18px;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--ok);
+      }
+      .links {
+        display: grid;
+        gap: 10px;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      code {
+        background: #f0f4fb;
+        border-radius: 6px;
+        padding: 2px 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <main class="card">
+        <div class="status"><span class="dot"></span>Deployment is live</div>
+        <h1>Books AI API</h1>
+        <p>Your Vercel deployment is working. Use the API endpoints below.</p>
+        <div class="links">
+          <a href="/api/health" target="_blank" rel="noreferrer">Open <code>/api/health</code></a>
+          <a href="/api/books/search?query=atomic%20habits" target="_blank" rel="noreferrer">Test <code>/api/books/search?query=atomic%20habits</code></a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
