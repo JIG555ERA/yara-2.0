@@ -1,7 +1,20 @@
 # Books AI API Documentation
 
 Base URL (local): `http://localhost:4000`  
-Base URL (Vercel): `https://<your-deployment-domain>`
+Base URL (Vercel): `https://yara-2-0.vercel.app/`
+
+```
+{
+  "ok": true,
+  "service": "books-ai-search",
+  "message": "API is running. Use /api/health or /api/books/* endpoints.",
+  "endpoints": [
+    "/api/health",
+    "/api/books/search?query=atomic%20habits"
+  ],
+  "timestamp": "2026-02-13T19:24:35.164Z"
+}
+```
 
 All endpoints return JSON.
 
